@@ -201,7 +201,7 @@ return [
     'Last reply time' => '最后回复时间',
 
     'Agree above and register' => '同意以上并参加',
-
+    'Administer' => '管理员',
     'Headquarters' => '管理员',
     'Unrated' => '未评级',
     'Bronze' => '青铜',

@@ -384,7 +384,7 @@ class User extends ActiveRecord implements IdentityInterface
         if ($rating == -1)
             $rating = $this->rating;
         if ($this->role == self::ROLE_ADMIN) {
-            return Yii::t('app', 'Headquarters');
+            return Yii::t('app', 'Administer');
         } else if ($rating == NULL) {
             return Yii::t('app', 'Unrated');
         } else if ($rating < 1150) {

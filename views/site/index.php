@@ -6,12 +6,12 @@ use yii\helpers\Html;
 /* @var $contests array */
 /* @var $news app\models\Discuss */
 
-$this->title = Yii::$app->setting->get('ojName');
+$this->title = Yii::$app->setting->get('ojName') . ' Online Judge';
 ?>
 <div class="row blog">
     <div class="col-md-8">
         <div class="jumbotron">
-            <h1>Welcome to NCNU OJ</h1>
+            <h2>Welcome to NCNU OJ</h2>
             <p>欢迎来到<?= Yii::$app->setting->get('schoolName') ?>在线判题系统——<?= Yii::$app->setting->get('ojName') ?> Online Judge</p>
         </div>
         <hr>
