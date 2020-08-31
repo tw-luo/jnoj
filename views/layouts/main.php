@@ -39,7 +39,7 @@ AppAsset::register($this);
                         </a>
                     </div>
                     <div class="brand">
-                        Online Judge
+                        南昌师范学院数计系
                     </div>
                 </div>
                 <div class="clearfix"></div>
