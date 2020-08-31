@@ -11,7 +11,7 @@ $this->title = Yii::$app->setting->get('ojName');
 <div class="row blog">
     <div class="col-md-8">
         <div class="jumbotron">
-            <h1>Welcome to NCNU Online Judge</h1>
+            <h1>Welcome to NCNU OJ</h1>
             <p>欢迎来到<?= Yii::$app->setting->get('schoolName') ?>在线判题系统——<?= Yii::$app->setting->get('ojName') ?> Online Judge</p>
         </div>
         <hr>

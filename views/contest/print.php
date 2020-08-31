@@ -16,7 +16,7 @@ $this->params['model'] = $model;
 <div class="print-source-index" style="margin-top: 20px">
 
     <div class="well">
-        如需打印代码以供队友查看，可以在此提交代码内容，工作人员打印好后会送至队伍前。
+        如需打印代码，可以在此提交代码内容，工作人员打印好后会送至队伍前。
     </div>
 
     <?= GridView::widget([
