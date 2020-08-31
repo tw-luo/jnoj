@@ -125,7 +125,7 @@ $this->registerJs($plotJS);
                         'username',
                         'nickname',
                         [
-                            'attribute' => Yii::t('app', 'QQ'),
+                            'attribute' => Yii::t('app', 'Q Q'),
                             'value' => function ($model, $widget) {
                                 return Html::encode($model->profile->qq_number);
                             },

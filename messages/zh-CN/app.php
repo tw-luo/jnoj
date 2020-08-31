@@ -36,7 +36,7 @@ return [
     'Clarification' => '答疑',
     'Operation' => '操作',
     'Reply' => '回复',
-    'QQ' => 'ＱＱ号',
+    'QQ' => 'QQ',
     'Standing' => '榜单',
     'Verify Code' => '验证码',
     'Rating' => '排行榜',
@@ -202,7 +202,7 @@ return [
 
     'Agree above and register' => '同意以上并参加',
 
-    'Headquarters' => '司令部',
+    'Headquarters' => '管理员',
     'Unrated' => '未评级',
     'Bronze' => '青铜',
     'Silver' => '白银',
