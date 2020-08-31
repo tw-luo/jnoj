@@ -122,7 +122,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Yii::$app->setting->get('ojName') ?><?= date('Y') ?></p>
+        <p class="pull-left">&copy; <?= Yii::$app->setting->get('ojName') ?> 南昌师范学院数计系 <?= date('Y') ?></p>
         <p class="pull-left">
             <?= Html::a (' 中文简体 ', '?lang=zh-CN') . '| ' .
             Html::a (' English ', '?lang=en') ;
