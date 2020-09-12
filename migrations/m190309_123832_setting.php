@@ -13,8 +13,8 @@ class m190309_123832_setting extends Migration
     public function safeUp()
     {
         $this->addColumn('{{%setting}}', 'id','INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST');
-        $this->insert('{{%setting}}', ['key' => 'ojName', 'value' => '江南']);
-        $this->insert('{{%setting}}', ['key' => 'schoolName', 'value' => '江南大学']);
+        $this->insert('{{%setting}}', ['key' => 'ojName', 'value' => 'NCNU']);
+        $this->insert('{{%setting}}', ['key' => 'schoolName', 'value' => '南昌师范学院']);
         $this->insert('{{%setting}}', ['key' => 'scoreboardFrozenTime', 'value' => '7200']);
         $this->insert('{{%setting}}', ['key' => 'isShareCode', 'value' => '1']);
         $this->insert('{{%setting}}', ['key' => 'oiMode', 'value' => '0']);
