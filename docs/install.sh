@@ -277,7 +277,7 @@ install_jnoj(){
 
     /usr/sbin/useradd -m -u 1536 judge
     cd /home/judge/
-    git clone https://gitee.com/shi-yang/jnoj.git
+    git clone https://gitee.com/tw-luo/jnoj.git
 
     config_jnoj
     if check_sys packageManager yum; then
