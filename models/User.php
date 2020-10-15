@@ -400,7 +400,7 @@ class User extends ActiveRecord implements IdentityInterface
         } else if ($rating < 2400) {
             return Yii::t('app', 'Master');
         } else {
-            return Yii::t('app', 'Challenger');
+            return Yii::t('app', 'GrandMaster');
         }
     }
 
@@ -421,11 +421,11 @@ class User extends ActiveRecord implements IdentityInterface
             'user-green',
             'user-cyan',
             'user-blue',
-            'user-orange',
             'user-violet',
+            'user-orange',
+            'user-red',
             'user-yellow',
             'user-fire',
-            'user-red',
             'user-admin'
         ];
         if (empty($rating)) {
@@ -440,8 +440,11 @@ class User extends ActiveRecord implements IdentityInterface
             $tmp = $colors[4];
         } else if ($rating < 2150) {
             $tmp = $colors[5];
-        } else {
+        } else if ($rating < 2400) {
             $tmp = $colors[6];
+        }
+        else {
+            $tmp = $colors[7];
         }
         return "<span class=\"{$tmp} rated-user\">{$nickname}</span>";
     }
@@ -459,11 +462,11 @@ class User extends ActiveRecord implements IdentityInterface
             'user-green',
             'user-cyan',
             'user-blue',
-            'user-orange',
             'user-violet',
+            'user-orange',
+            'user-red',
             'user-yellow',
             'user-fire',
-            'user-red',
             'user-admin'
         ];
         if ($this->role == self::ROLE_ADMIN) {
@@ -480,8 +483,10 @@ class User extends ActiveRecord implements IdentityInterface
             $tmp = $colors[4];
         } else if ($rating < 2150) {
             $tmp = $colors[5];
-        } else {
+        } else if ($rating < 2400) {
             $tmp = $colors[6];
+        }else {
+            $tmp = $colors[7];
         }
         return "<span class=\"{$tmp} rated-user\">{$nickname}</span>";
     }

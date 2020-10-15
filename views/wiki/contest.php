@@ -98,11 +98,11 @@
             <th>Between 1900 and 2149</th>
         </tr>
         <tr>
-            <th>超凡大师 [Challenger]</th>
+            <th>大师 [Master]</th>
             <th>Between 2150 and 2399</th>
         </tr>
         <tr>
-            <th>最强王者 [Master]</th>
+            <th>最强王者 [GrandMaster]</th>
             <th>2400 and above</th>
         </tr>
         </tbody>

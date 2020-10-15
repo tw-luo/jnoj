@@ -209,8 +209,8 @@ return [
     'Gold' => '黄金',
     'Platinum' => '铂金',
     'Diamond' => '钻石',
-    'Master' => '王者',
-    'Challenger' => '大师',
+    'GrandMaster' => '王者',
+    'Master' => '大师',
 
     'First to solve problem' => '最快解答',
     'Solved problem' => '正确解答',
