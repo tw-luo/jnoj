@@ -19,12 +19,12 @@ $this->params['model'] = $model;
             <?= Yii::$app->formatter->asMarkdown($model->description) ?>
         </div>
 
-        <h3><?= Yii::t('app', 'Input') ?></h3>
+        <h3><?= Yii::t('app', 'Input Format') ?></h3>
         <div class="content-wrapper">
             <?= Yii::$app->formatter->asMarkdown($model->input) ?>
         </div>
 
-        <h3><?= Yii::t('app', 'Output') ?></h3>
+        <h3><?= Yii::t('app', 'Output Format') ?></h3>
         <div class="content-wrapper">
             <?= Yii::$app->formatter->asMarkdown($model->output) ?>
         </div>

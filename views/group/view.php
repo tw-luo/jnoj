@@ -156,6 +156,7 @@ $scoreboardFrozenTime = Yii::$app->setting->get('scoreboardFrozenTime') / 3600;
                 'dataProvider' => $userDataProvider,
                 'options' => ['class' => 'table-responsive'],
                 'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
                     [
                         'attribute' => 'role',
                         'value' => function ($model, $key, $index, $column) {

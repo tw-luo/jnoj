@@ -91,7 +91,7 @@ use yii\bootstrap\Modal;
 int main()
 {
     // 生成 20 组数据
-    for (int test = 1; test <= 30; test++) {
+    for (int test = 1; test <= 20; test++) {
         char name[100];
         sprintf(name, "%d.in", test);  // 注意文件名称必须以 in 作为后缀
         FILE * fp = fopen(name, "w");

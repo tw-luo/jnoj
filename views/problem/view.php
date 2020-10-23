@@ -184,12 +184,12 @@ $nextProblemID = $model->getNextProblemID();
                         <?= Yii::$app->formatter->asMarkdown($model->description) ?>
                     </div>
 
-                    <h4><?= Yii::t('app', 'Input') ?></h4>
+                    <h4><?= Yii::t('app', 'Input Format') ?></h4>
                     <div class="content-wrapper">
                         <?= Yii::$app->formatter->asMarkdown($model->input) ?>
                     </div>
 
-                    <h4><?= Yii::t('app', 'Output') ?></h4>
+                    <h4><?= Yii::t('app', 'Output Format') ?></h4>
                     <div class="content-wrapper">
                         <?= Yii::$app->formatter->asMarkdown($model->output) ?>
                     </div>
