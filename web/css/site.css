@@ -5,6 +5,7 @@ body {
 }
 pre {
     border-radius: unset;
+    tab-size: 4;
 }
 .pre {
     white-space:pre-wrap;
@@ -19,9 +20,11 @@ pre {
     word-wrap: break-word;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
+    tab-size: 4;
 }
 .pre p {
     margin: 0;
+    tab-size: 4;
 }
 .wrap {
     min-height: 100%;
