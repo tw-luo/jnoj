@@ -40,17 +40,41 @@ class CodeMirror extends InputWidget
         CodeMirrorAsset::register($this->view);
         $id = $this->options['id'];
         $script = <<<EOF
-        CodeMirror.fromTextArea(document.getElementById("{$id}"),{
+        const editor=CodeMirror.fromTextArea(document.getElementById("{$id}"),{
+            mode: "text/x-c++src",
             theme: "darcula",
             lineNumbers: true,
             styleActiveLine: true,
+            tabSize: 4,
             indentUnit: 4,
+            indentWithTabs: true,
             autofocus: true,
             matchBrackets: true,
             autoRefresh: true,
-            lineWrapping: true, //代码折叠
-            foldGutter: true,
-            autoCloseBrackets: true
+            lineWrapping: true, 
+            foldGutter: true,//代码折叠
+            autoCloseBrackets: false,
+        });
+        editor.addKeyMap({
+            name: 'autoInsertParentheses',
+            "'('": (cm) => {
+                const cur = cm.getCursor()
+        
+                cm.replaceRange('()', cur, cur, '+insert')
+                cm.doc.setCursor({ line: cur.line, ch: cur.ch + 1 })
+            },
+            "'['": (cm) => {
+                const cur = cm.getCursor()
+        
+                cm.replaceRange('[]', cur, cur, '+insert')
+                cm.doc.setCursor({ line: cur.line, ch: cur.ch + 1 })
+            },
+            "'{'": (cm) => {
+                const cur = cm.getCursor()
+        
+                cm.replaceRange('{}', cur, cur, '+insert')
+                cm.doc.setCursor({ line: cur.line, ch: cur.ch + 1 })
+            }
         });
 EOF;
         $this->view->registerCss("
