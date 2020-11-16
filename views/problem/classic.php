@@ -35,12 +35,12 @@ $nextProblemID = $model->getNextProblemID();
             <?= Yii::$app->formatter->asMarkdown($model->description) ?>
         </div>
 
-        <h3><?= Yii::t('app', 'Input') ?></h3>
+        <h3><?= Yii::t('app', 'Input Format') ?></h3>
         <div class="content-wrapper">
             <?= Yii::$app->formatter->asMarkdown($model->input) ?>
         </div>
 
-        <h3><?= Yii::t('app', 'Output') ?></h3>
+        <h3><?= Yii::t('app', 'Output Format') ?></h3>
         <div class="content-wrapper">
             <?= Yii::$app->formatter->asMarkdown($model->output) ?>
         </div>
@@ -191,7 +191,7 @@ $nextProblemID = $model->getNextProblemID();
                             if ($sub['result'] == Solution::OJ_AC) {
                                 $span = '<strong class="text-success"' . $innerHtml . '>' . Solution::getResultList($sub['result']) . '</strong>';
                                 echo Html::a($span,
-                                    ['/solution/source', 'id' => $sub['id']],
+                                    ['/solution/result', 'id' => $sub['id']],
                                     ['onclick' => 'return false', 'data-click' => "solution_info", 'data-pjax' => 0]
                                 );
                             } else {

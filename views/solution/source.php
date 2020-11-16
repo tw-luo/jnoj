@@ -17,7 +17,7 @@ if (!$model->canViewSource()) {
             <p><?= Yii::t('app', 'Submit Time') ?>：<?= $model->created_at ?></p>
         </div>
         <div class="col-md-6">
-            <p>运行 ID: <?= Html::a($model->id, ['/solution/detail', 'id' => $model->id]) ?></p>
+            <p><?= Yii::t('app', 'Run ID') ?>: <?= Html::a($model->id, ['/solution/detail', 'id' => $model->id]) ?></p>
         </div>
     </div>
     <div class="pre"><p><?= Html::encode($model->source) ?></p></div>

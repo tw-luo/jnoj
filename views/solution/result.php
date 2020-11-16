@@ -31,6 +31,8 @@ if (!$model->canViewErrorInfo()) {
         ?>
         <?php endif; ?>
     <?php endif; ?>
+    <h3>提交代码: </h3>
+    <div class="pre"><p><?= Html::encode($model->source) ?></p></div>
 </div>
 
 <script>
@@ -66,4 +68,14 @@ if (!$model->canViewErrorInfo()) {
     if (verdict == CE) {
         $("#run-info").append(json);
     }
+</script>
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            $('.pre p').each(function(i, block) {  // use <pre><p>
+                hljs.highlightBlock(block);
+            });
+        })
+    })(jQuery);
 </script>

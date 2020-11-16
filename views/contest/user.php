@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'User');
         'dataProvider' => $provider,
         'options' => ['class' => 'table-responsive'],
         'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
             [
                 'attribute' => 'participants',
                 'value' => function ($model, $key, $index, $column) {

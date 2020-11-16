@@ -302,7 +302,7 @@ $nextProblemID = $model->getNextProblemID();
                                                 if ($sub['result'] == Solution::OJ_AC) {
                                                     $span = '<strong class="text-success"' . $innerHtml . '>' . Solution::getResultList($sub['result']) . '</strong>';
                                                     echo Html::a($span,
-                                                        ['/solution/source', 'id' => $sub['id']],
+                                                        ['/solution/result', 'id' => $sub['id']],
                                                         ['onclick' => 'return false', 'data-click' => "solution_info", 'data-pjax' => 0]
                                                     );
                                                 } else {
@@ -339,7 +339,7 @@ $nextProblemID = $model->getNextProblemID();
                                 if ($sub['result'] == Solution::OJ_AC) {
                                     $span = '<strong class="text-success"' . $innerHtml . '>' . Solution::getResultList($sub['result']) . '</strong>';
                                     echo Html::a($span,
-                                        ['/solution/source', 'id' => $sub['id']],
+                                        ['/solution/result', 'id' => $sub['id']],
                                         ['onclick' => 'return false', 'data-click' => "solution_info", 'data-pjax' => 0]
                                     );
                                 } else {
