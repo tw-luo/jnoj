@@ -133,7 +133,7 @@ class UserController extends Controller
                 $model->save();
             }
             Yii::$app->session->setFlash('success', Yii::t('app', 'Saved successfully'));
-            return $this->refresh();
+            echo "<script>alert('保存成功',location.href='".$_SERVER["HTTP_REFERER"]."')</script>";
         }
 
         return $this->render('update', [
@@ -150,8 +150,7 @@ class UserController extends Controller
     public function actionDelete($id)
     {
         Yii::$app->session->setFlash('error', '暂不支持删除用户');
-
-        return $this->redirect(['index']);
+        echo "<script>alert('暂不支持删除用户',location.href='index')</script>";
     }
 
     /**

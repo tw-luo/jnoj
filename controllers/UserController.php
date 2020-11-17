@@ -119,7 +119,7 @@ class UserController extends BaseController
                 $profile->save();
             }
             Yii::$app->session->setFlash('success', Yii::t('app', 'Saved successfully'));
-            return $this->refresh();
+            echo "<script>alert('保存成功',location.href='".$_SERVER["HTTP_REFERER"]."')</script>";
         }
 
         return $this->render('setting', [
@@ -150,10 +150,11 @@ class UserController extends BaseController
             ->send();
         if ($res) {
             Yii::$app->session->setFlash('success', '已发送验证链接到您的邮箱：' . $user->email .'，请查收并点击验证链接进行确认。');
+            echo "<script>alert('已发送验证链接到您的邮箱,请查收并点击验证链接进行确认。',location.href='".$_SERVER["HTTP_REFERER"]."')</script>";
         } else {
             Yii::$app->session->setFlash('error', '验证邮箱发送失败。可能原因：1. 该邮箱不存在；2. 本网站系统邮箱配置信息有误，需联系管理员检查系统的发送邮箱配置信息。');
+            echo "<script>alert('验证邮箱发送失败。可能原因：1. 该邮箱不存在；2. 本网站系统邮箱配置信息有误，需联系管理员检查系统的发送邮箱配置信息。',location.href='".$_SERVER["HTTP_REFERER"]."')</script>";
         }
-        $this->redirect(['/user/setting', 'action' => 'account']);
     }
 
     /**
