@@ -11,7 +11,7 @@ class RatingController extends BaseController
 {
     public function actionIndex()
     {
-        $query = User::find()->orderBy('rating DESC');
+        $query = User::find()->where('rating > 0')->orderBy('rating DESC');
         $top3users = $query->limit(3)->all();
         $defaultPageSize = 50;
         $countQuery = clone $query;
