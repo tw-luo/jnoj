@@ -12,9 +12,9 @@ use app\models\Homework;
 /* @var $model app\models\Homework */
 
 $this->title = Html::encode($model->title);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Group'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Group'), 'url' => ['/group/view', 'id' => $model->group->id]];
 $this->params['breadcrumbs'][] = ['label' => Html::encode($model->group->name), 'url' => ['/group/view', 'id' => $model->group->id]];
-$this->params['breadcrumbs'][] = ['label' => Html::encode($model->title), 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => Html::encode($model->title), 'url' => ['/contest/view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Setting');
 $this->params['model'] = $model;
 $problems = $model->problems;
@@ -113,12 +113,13 @@ $scoreboardFrozenTime = Yii::$app->setting->get('scoreboardFrozenTime') / 3600;
                     <th width="200px"><?= Yii::t('app', 'Operation') ?></th>
                 </tr>
                 </thead>
+
                 <tbody>
                 <?php foreach ($problems as $key => $p): ?>
                     <tr>
-                        <th><?= Html::a(chr(65 + $key), ['view', 'id' => $model->id, 'action' => 'problem', 'problem_id' => $key]) ?></th>
-                        <th><?= Html::a($p['problem_id'], '') ?></th>
-                        <td><?= Html::a(Html::encode($p['title']), ['view', 'id' => $model->id, 'action' => 'problem', 'problem_id' => $key]) ?></td>
+                        <th><?= Html::a(chr(65 + $key), ['/problem/view', 'id' => $p['problem_id']]) ?></th>
+                        <th><?= Html::a($p['problem_id'], ['/problem/view', 'id' => $p['problem_id']]) ?></th>
+                        <td><?= Html::a(Html::encode($p['title']), ['/problem/view', 'id' => $p['problem_id']]) ?></td>
                         <th>
                             <?php Modal::begin([
                                 'header' => '<h3>'. Yii::t('app','Modify') . ' : ' . chr(65 + $key) . '</h3>',
